@@ -1,0 +1,765 @@
+_type: export
+__export_format: 4
+__export_date: 2023-12-01T15:11:42.809Z
+__export_source: insomnia.desktop.app:v2023.5.8
+resources:
+  - _id: req_fef31b4c1c4848bb8fb3c56363d2fee8
+    parentId: fld_d0b0e680083b45a188acdc24a5429452
+    modified: 1701365369533
+    created: 1701348427973
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/books"
+    name: createBook
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Le livre de test",
+          "author": "Pierre",
+          "publicationDate": "2023-01-04",
+          "availableCopies": 5
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701348370741
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d0b0e680083b45a188acdc24a5429452
+    parentId: wrk_6ab6c56d92ab4bfd884b209c613722e6
+    modified: 1701411848094
+    created: 1701348360592
+    name: Books
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1701348360592
+    _type: request_group
+  - _id: wrk_6ab6c56d92ab4bfd884b209c613722e6
+    parentId: null
+    modified: 1701348292879
+    created: 1701348292879
+    name: SpringAPI
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_b87bae11530b40509d9f623d95cc3677
+    parentId: fld_d0b0e680083b45a188acdc24a5429452
+    modified: 1701365160443
+    created: 1701348545900
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/books/{id}"
+    name: getBook
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701348370691
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ca25b5c704da4b5d8aad171b4366b76c
+    parentId: fld_d0b0e680083b45a188acdc24a5429452
+    modified: 1701351955305
+    created: 1701348370441
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/books"
+    name: getAllBooks
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701348370641
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5d3864cf5ae846ddb6195ddec7d783c3
+    parentId: fld_d0b0e680083b45a188acdc24a5429452
+    modified: 1701365918624
+    created: 1701352557877
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/books/title"
+    name: getBooksByTitle
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Le livre de test"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701348370591
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2872a99db9dc43a7b195ad19c6d70ea5
+    parentId: fld_d0b0e680083b45a188acdc24a5429452
+    modified: 1701366585617
+    created: 1701352608535
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/books/author"
+    name: getBooksByAuthor
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"author": "Pierre"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701348370566
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3a54fa6c1953462085300b2b1c6029c5
+    parentId: fld_d0b0e680083b45a188acdc24a5429452
+    modified: 1701409212030
+    created: 1701352645046
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port
+      }}/api/books/publicationDate"
+    name: getBooksByPublicationDate
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"publicationDate": "2023-01-01T00:00:00.000+00:00"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701348370553.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_635b84b877004ac4afde1d9b0da5f3b1
+    parentId: fld_d0b0e680083b45a188acdc24a5429452
+    modified: 1701367707038
+    created: 1701352711725
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/books/search"
+    name: getBooksByTitleAndAuthor
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "Le beau et le clochard",
+        	"author": "Ynnos Ekrub"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701348370547.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c71a26f5fcaf41feb58a87da065fbd31
+    parentId: fld_d0b0e680083b45a188acdc24a5429452
+    modified: 1701410219013
+    created: 1701348612399
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/books/3"
+    name: updateBook
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "availableCopies": 100
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701348370541
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5d1a8a085af44fe5910a362182711ca7
+    parentId: fld_d0b0e680083b45a188acdc24a5429452
+    modified: 1701411282376
+    created: 1701348644793
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/books/5"
+    name: deleteBook
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701348370441
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a28fb66038c84f05becc31db34930a8e
+    parentId: fld_0ff3944c616b4a29b2f1983d004dd8d4
+    modified: 1701425388290
+    created: 1701348311896
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/users"
+    name: createUser
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "Pierre",
+        	"password": "Pierre",
+        	"email": "pierregi31.12@gmail.com"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701416174713
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0ff3944c616b4a29b2f1983d004dd8d4
+    parentId: wrk_6ab6c56d92ab4bfd884b209c613722e6
+    modified: 1701411856100
+    created: 1701348347816
+    name: Users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1701348356302.5
+    _type: request_group
+  - _id: req_0906abdedf234b0193956f3d3e1d41ff
+    parentId: fld_0ff3944c616b4a29b2f1983d004dd8d4
+    modified: 1701416266233
+    created: 1701416174613
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/users/{id}"
+    name: getUser
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701416174613
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_301d463f78584ea6a4700162a97711c0
+    parentId: fld_0ff3944c616b4a29b2f1983d004dd8d4
+    modified: 1701416243642
+    created: 1701416193000
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/users/all"
+    name: getAllUsers
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701416174513
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_51408f9428bc4142af5bf14ab6d7a04d
+    parentId: fld_0ff3944c616b4a29b2f1983d004dd8d4
+    modified: 1701417601431
+    created: 1701417491819
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/users/username"
+    name: getUserByUsername
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "Pierre"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701416174463
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_15e7458d49024cbfa9f760d236565a7d
+    parentId: fld_0ff3944c616b4a29b2f1983d004dd8d4
+    modified: 1701418223108
+    created: 1701417570266
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/users/email"
+    name: getUserByEmail
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "Pierre"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701416174438
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e95917c6ec82447480c878aa2b167fe0
+    parentId: fld_0ff3944c616b4a29b2f1983d004dd8d4
+    modified: 1701416914908
+    created: 1701416865751
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/users/{id}"
+    name: updateUser
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "",
+        	"password": "",
+        	"email": ""
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701416174413
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4a5fa59467c04445ba7bb0f8806655c1
+    parentId: fld_0ff3944c616b4a29b2f1983d004dd8d4
+    modified: 1701421410847
+    created: 1701417681180
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/users/10"
+    name: deleteUser
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701416174313
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_248665f3447f424e8b0d64a632a1b4a2
+    parentId: fld_741641303dba47d3ae8e0e695929f130
+    modified: 1701438574548
+    created: 1701437747415
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/loans"
+    name: createLoan
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"userId": 12,
+        	"bookId": 6,
+        	"loanDate": "2023-01-04T00:00:00.000+00:00",
+        	"returnDate": "2023-01-10T00:00:00.000+00:00"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701437747415
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_741641303dba47d3ae8e0e695929f130
+    parentId: wrk_6ab6c56d92ab4bfd884b209c613722e6
+    modified: 1701348352013
+    created: 1701348352013
+    name: Loan
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1701348352013
+    _type: request_group
+  - _id: req_aaa6abe394cf4f52b4da3079354a3f6d
+    parentId: fld_741641303dba47d3ae8e0e695929f130
+    modified: 1701438592800
+    created: 1701437745637
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/loans/{id}"
+    name: getLoan
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701437745637
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cf4beeae05d24b368db56cdb8f679570
+    parentId: fld_741641303dba47d3ae8e0e695929f130
+    modified: 1701438649481
+    created: 1701437743605
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/loans"
+    name: getAllLoans
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701437743605
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3cbc3c33bd7d4886948c8cd6dcc1a394
+    parentId: fld_741641303dba47d3ae8e0e695929f130
+    modified: 1701441950082
+    created: 1701437740466
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/loans/user/{id}"
+    name: getLoanByUserID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701437740466
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_04f80cb1d2fc4a3383ed765439625402
+    parentId: fld_741641303dba47d3ae8e0e695929f130
+    modified: 1701442050024
+    created: 1701437789493
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/loans/book/{id}"
+    name: getLoanByBookID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701437740441
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d47b77659929493c90907bfe01381bd4
+    parentId: fld_741641303dba47d3ae8e0e695929f130
+    modified: 1701442646970
+    created: 1701437787744
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/loans/loan"
+    name: getLoanByLoanDate
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"loanDate": ""
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701437740416
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f8f482ecaa95467ab0f852803fde92c3
+    parentId: fld_741641303dba47d3ae8e0e695929f130
+    modified: 1701442642221
+    created: 1701437785823
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/loans/return"
+    name: getLoanByReturnDate
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"returnDate": ""
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701437740366
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e9b1dda76a4c43cc974b9d1bfc7af83a
+    parentId: fld_741641303dba47d3ae8e0e695929f130
+    modified: 1701441223529
+    created: 1701437836320
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/loans/{id}"
+    name: updateLoan
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"userId": 14,
+        	"bookId": 6,
+        	"loanDate": "2023-01-04T00:00:00.000+00:00",
+        	"returnDate": "2023-01-10T00:00:00.000+00:00"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701437740316
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_366770de95554e8b98e5b5b271c89f1b
+    parentId: fld_741641303dba47d3ae8e0e695929f130
+    modified: 1701441270316
+    created: 1701437834444
+    url: "{{ _.protocol }}://{{ _.base_host }}:{{ _.port }}/api/loans/1"
+    name: deleteLoan
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1701437740266
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_aa935f9ffeb4dd1e9e311cf4678fb6791cbe018c
+    parentId: wrk_6ab6c56d92ab4bfd884b209c613722e6
+    modified: 1701348322668
+    created: 1701348292884
+    name: Base Environment
+    data:
+      protocol: http
+      base_host: localhost
+      port: 8080
+    dataPropertyOrder:
+      "&":
+        - protocol
+        - base_host
+        - port
+    color: null
+    isPrivate: false
+    metaSortKey: 1701348292884
+    _type: environment
+  - _id: jar_aa935f9ffeb4dd1e9e311cf4678fb6791cbe018c
+    parentId: wrk_6ab6c56d92ab4bfd884b209c613722e6
+    modified: 1701424173442
+    created: 1701348292885
+    name: Default Jar
+    cookies:
+      - key: JSESSIONID
+        value: 09A43F70FC7926C5FACF238C617668E6
+        domain: localhost
+        path: /
+        httpOnly: true
+        hostOnly: true
+        creation: 2023-12-01T09:49:33.441Z
+        lastAccessed: 2023-12-01T09:49:33.441Z
+        id: "01181709456694513"
+    _type: cookie_jar
